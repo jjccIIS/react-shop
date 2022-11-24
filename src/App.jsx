@@ -7,19 +7,19 @@ import Data from './context/ApiData';
 //Lazy Components
 const Home = lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./pages/Home')), 200);
+    setTimeout(() => resolve(import('./pages/Home')), 300);
   });
 });
 
 const Cart = lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./pages/Cart')), 200);
+    setTimeout(() => resolve(import('./pages/Cart')), 300);
   });
 });
 //Normal Components
 const About = lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('./pages/About')), 200);
+    setTimeout(() => resolve(import('./pages/About')), 300);
   });
 });
 import NoPage from './pages/NoPage'
