@@ -65,7 +65,7 @@ const Cart = (props) => {
         </ul>)
       }
       {cartItems.length !== 0 ? (
-        <div className='flex m-5'>
+        <div className='flex m-5 flex-col'>
           {Totalizer()}
           <ul className='bg-white rounded-lg border border-gray-200 w-96 text-gray-900'>
             <li className='px-6 py-2 border-b border-gray-200 w-full rounded-t-lg bg-gray-400 text-white'><p>Sub Total</p><span>{formatMoney(total.subtotal)}</span></li>
@@ -73,6 +73,11 @@ const Cart = (props) => {
             <li className='px-6 py-2 border-b border-gray-200 w-full rounded-t-lg bg-gray-400 text-white'><p>Shipping</p> <span>{formatMoney(total.shipping)}</span></li>
             <li className='px-6 py-2 border-b border-gray-200 w-full rounded-t-lg bg-blue-400 text-white'><p>Total</p>    <span>{formatMoney(total.total)}</span></li>
           </ul>
+          <button type="button" className="mb-2 w-full inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-normal uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+            onClick={()=>alert("Implement Payment")}>
+            Checkout
+          </button>
+
         </div>
       ) : (<div></div>)}
 
